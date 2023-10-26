@@ -1000,7 +1000,6 @@ a:focus, a:hover {
 .pricing-table {
   padding: 100px 0;
   padding-bottom: 70px;
-  background: url("../images/pricing-bg.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
