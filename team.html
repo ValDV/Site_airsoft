@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
@@ -33,10 +31,11 @@
   <link rel="stylesheet" href="plugins/slick/slick.css">
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-
+  <!-- Incluez FontAwesome pour l'icône de drapeau anglais -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body id="body">
 
+<body id="body">
   <!--
   Start Preloader
   ==================================== -->
@@ -117,25 +116,22 @@ End Fixed Navigation
 	</div>
 </section>
 
-<!--
-Start About Section
-==================================== -->
+<!-- La section "about" initiale -->
 <section class="about" id="about">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-xl-6 col-lg-8">
-				<!-- section title -->
-				<div class="title text-center">
-					<h2>Mon CV</h2>
-				</div>
-					<div class="border"></div>
-					<img loading="lazy" src="images/cv.jpg" class="img-fluid" alt="">
-				</div>
-				</div>
-				<!-- /section title -->
-			</div>
-		</div>
-	</div> <!-- End container -->
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-6 col-lg-8">
+        <!-- section title -->
+        <div class="title text-center">
+          <h2>Mon CV</h2>
+          <p>Cliquez sur le bouton ci-dessous pour changer la langue du CV</p>
+          <button id="flag-button" onclick="changeImage()"><i class="fas fa-flag"></i></button>
+        </div>
+        <div class="border"></div>
+          <img id="cv-image" loading="lazy" src="images/cv_fr.jpg" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
 </section> <!-- End section -->
 
 <footer id="footer" class="bg-one">
@@ -144,7 +140,6 @@ Start About Section
 		<h6>Design and Developed by <a href="https://github.com/ValDV">Valentin Rosier</a></h6>
 	</div>
 </footer> <!-- end footer -->
-
 
 <!-- end Footer Area
 ========================================== -->
@@ -170,9 +165,25 @@ Start About Section
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"></script>
 <script src="plugins/google-map/gmap.js"></script>
 
+<!-- JavaScript pour changer l'image -->
+<script>
+  var flagButton = document.getElementById("flag-button");
+  var cvImage = document.getElementById("cv-image");
+  var isFrench = true; // Définit l'état initial comme français
+
+  function changeImage() {
+    if (isFrench) {
+      cvImage.src = "images/cv_en.jpg";
+      isFrench = false;
+    } else {
+      cvImage.src = "images/cv_fr.jpg";
+      isFrench = true;
+    }
+  }
+</script>
+
 <!-- Custom js -->
 <script src="js/script.js"></script>
 
 </body>
-
 </html>
