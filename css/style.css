@@ -983,11 +983,6 @@ a:focus, a:hover {
   font-weight: 700;
   line-height: 50px;
 }
-.counters-item i {
-  font-size: 40px;
-  display: inline-block;
-  color: #28ABE3;
-}
 .counters-item h3 {
   font-size: 18px;
   margin: 0;
